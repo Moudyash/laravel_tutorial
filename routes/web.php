@@ -223,10 +223,10 @@ Route::get('/', function () {
 ///20 for count to try to access route time
 /// 1 for time 1 minute
 /// you can access or refresh time route just 20 time per minute
-//Route::middleware(['throttle:20,10'])->group(function (){
-//
-//
-//Route::get("time",function (){
-//return view('welcome');
-//});
-//});
+Route::middleware(['throttle:20,10'])->group(function (){
+
+
+Route::get("time",function (){
+return view('welcome');
+});
+});
